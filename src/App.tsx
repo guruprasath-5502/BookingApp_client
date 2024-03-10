@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Navigate,
   Route,
@@ -6,6 +5,8 @@ import {
   Routes,
 } from "react-router-dom";
 import Layout from "./layouts/Layout";
+import Register from "./pages/Register";
+import SignIn from "./pages/SignIn";
 
 const App = () => {
   return (
@@ -24,6 +25,15 @@ const App = () => {
           element={
             <Layout>
               <p>Search Page</p>
+            </Layout>
+          }
+        />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/sign-in"
+          element={
+            <Layout>
+              <SignIn />
             </Layout>
           }
         />
